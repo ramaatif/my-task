@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+        background-image: url('https://images.blocksurvey.io/cdn-cgi/imagedelivery/G6cPOuGZ4Z_bEV13gBxixw/template-category/event-experience.svg/l#D2EDF9');
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow-y: auto;
+      margin: 0;
+      
+    }
+    form {
+      background-color: #e3f4fc;
+      padding: 48px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      
+    }
+       table{border: 2px solid #80c8e5 ;
+        width: 100%;
+        border-collapse: collapse;
+       
+    
+    }
+       th,td{border: 1px solid #2c647c;padding: 10px;text-align: left; }
+
+       th {
+      background-color: #B0D9EA;
+      color: white;
+      font-weight: bold;
+    }
+       td {
+      background-color: #B0D9EA;
+      color: white;
+      
+    }
+    .centered-underlined
+    {
+        display: block;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .centered-checkboxes label
+    {
+       
+        margin-right: 30px;
+    }
+    .centered-checkboxes
+    {
+        text-align: center;
+    }
+    .underlined-bio
+    {
+        display: block;
+        text-align: center;
+        text-decoration: underline;
+        
+    }
+    
+    caption {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: underline;
+      color: black;
+    }
+    
+    
+    input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 95%; 
+            padding: 8px; /* Adds padding for better appearance */
+            border: 1px solid #90caf9; /* Light blue border */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 14px; /* Consistent font size */
+            background-color: #ffffff;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: white;
+            color: black;
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            margin: 0 5px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover
+         {
+            background-color: whitesmoke; 
+        }
+        textarea {
+ width: 100%; 
+  height: fit-content; 
+  padding: 8px; 
+  border: 1px solid #90caf9; 
+  border-radius: 4px; 
+  font-size: 14px; 
+  resize: vertical; 
+  overflow-y: scroll; 
+  box-sizing: border-box
+        }
+        
+    </style>
+</head>
+<body>
+    <form  method="post">
+        <table>
+            <caption>RegistrationForm</caption>
+            <tr>
+                <th><label for="FirstName"></label>FirstName</th>
+                <td><input type="text" name="FirstName" id="FirstName" placeholder="Enter your first name" required></td>
+            </tr>
+            
+            <tr>
+                <th><label for="LastName"></label>LastName</th>
+                <td><input type="text" name="LastName" id="LastName" placeholder="Enter your last name" required></td>
+            </tr>
+            <tr>
+                <th><label for="Email"></label>Email</th>
+                <td><input type="email" name="Email" id="Email" placeholder="Enter your email" required></td>
+            </tr>
+            <tr>
+                <th><label for="Password">Password</label></th>
+                <td><input type="password" name="Password" id="Password" placeholder="Enter your password"></td>
+            </tr>
+            <tr>
+                <th rowspan="2"><label for="Gender"></label>Gender</th>
+                <td><input type="radio" name="Gender" id="Female" ><label for="Female"></label>Female</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="Gender" id="Male"><label for="Male">Male</label></td>
+            </tr>
+            <tr>
+                <th><label for="country"></label>Country</th>
+                <td>
+                    <select name="country" id="country">
+                        <option value="">Select a Country</option>
+                        <optgroup label="Africa">
+                         <option value="Eg">Egypt</option>
+                         <option value="Su">Sudan</option>
+                         <option value="Li">Libya</option>
+                         <option value="Tu">Tunsian</option>
+                         <option value="Mo">Moroco</option>
+                        </optgroup>
+                        <optgroup label="Europe" disabled>
+                            <option value="It">Italy</option>
+                            <option value="Sw">Sweden</option>
+                            <option value="Sp">Spain</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                            <option value="Pa">Palestine</option>
+                            <option value="SK">South Korea</option>
+                            <option value="In">India</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="birthdate"></label>BirthDay</th>
+                <td><input type="date" name="birthdate" id="birthdate"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <label for="Interests" class="centered-underlined">Interests</label>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2" class="centered-checkboxes">
+                 <input type="checkbox" name="Sports" id="Sports"><label for="Sports">Sports</label>
+                 <input type="checkbox" name="Music" id="Music"><label for="Music">Music</label>
+                 <input type="checkbox" name="Fashion" id="Fashion"><label for="Fashion">Fashion</label>
+                 <br><br>
+                 <input type="checkbox" name="reading" id="reading"><label for="reading">Reading</label>
+                 <input type="checkbox" name="movies" id="movies"><label for="Movies">Movies</label>
+                 <input type="checkbox" name="shopping" id="shopping"><label for="shopping">Shopping</label>
+            
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                 <label for="bio" class="underlined-bio">Bio</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" ><textarea name="bio" id="bio" placeholder="Enter your text here......"></textarea></td>
+            </tr>
+            <tr>
+                
+                <th colspan="2"> 
+             <div style="text-align: center;">
+                <input type="submit" name="submit"   value="Register" >
+                <input type="reset"    name="reset"              value="Clear" >
+            </div>
+            </th>
+            
+            </tr>
+        </table>
+    
+    </form>
+</body>
+</html>
